@@ -1,5 +1,6 @@
 use leptos::*;
 use leptos_meta::*;
+use leptos_router::*;
 
 #[component]
 pub fn App(cx: Scope) -> Element {
@@ -7,9 +8,34 @@ pub fn App(cx: Scope) -> Element {
 
     view! {
         cx,
-        <div>
-            <h1>"Hi from your Leptos WASM!"</h1>
-        </div>
+        <div id="root">
+        <Router>
+            <nav>
+                <A exact=true href="/">"SimpleCounter"</A>
+                <A href="about">"About"</A>
+                <A href="settings">"Settings"</A>
+            </nav>
+            <main>
+                <Routes>
+                    <Route
+                        path="/"
+                        element=move |cx| view! { cx,  <SimpleCounter initial_value=3 step=2/> }
+                    >
+                    </Route>
+                    <Route
+                        path="/about"
+                        element=move |cx| view! { cx,  <div>"this is about"</div> }
+                    >
+                    </Route>
+                    <Route
+                        path="/settings"
+                        element=move |cx| view! { cx,  <div>"this is about"</div> }
+                    >
+                    </Route>
+                </Routes>
+            </main>
+        </Router>
+    </div>
     }
 }
 

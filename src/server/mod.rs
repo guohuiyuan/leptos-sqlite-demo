@@ -49,7 +49,7 @@ async fn render_app(req: HttpRequest) -> impl Responder {
         };
         provide_context(cx, RouterIntegrationContext(std::rc::Rc::new(integration)));
 
-        view! { cx, <SimpleCounter initial_value=3 step=2/> }
+        view! { cx, <App /> }
     };
 
     HttpResponse::Ok().content_type("text/html").streaming(
