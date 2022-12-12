@@ -1,12 +1,60 @@
 h1 {
   margin-top: 6rem;
   width: 100%;
-  text-align:center;
+  text-align: center;
   font-size: xx-large;
 }
 
 html {
   background-color: rgb(225, 225, 225);
+}
+nav {
+  margin: 10px;
+}
+main {
+  margin: 10px;
+}
+button {
+  width: 100px;
+  padding: 8px;
+  margin: 10px;
+  background-color: #b4a078;
+  color: #fff;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px; /* future proofing */
+  -khtml-border-radius: 10px; /* for old Konqueror browsers */
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  font-weight: 900;
+  font-size: 125%;
+}
+span {
+  margin: 10px;
+  background: #b4a078;
+  color: white;
+  margin: auto;
+  padding: .3em 1em .5em;
+  border-radius: 3px;
+  box-shadow: 0 0 .5em #b4a078;
+}
+a{
+  width: 229px; height: 139px;
+  margin: 10px;
+  color: #f4f0ea;
+  padding: 16px 29px 28px 20px;
+  background: #0961ee;
+}
+a:nth-of-type(1){
+  background-position: right 29px bottom 28px;
+}
+a:nth-of-type(2){
+  background-origin: content-box;
+  margin: 29px 0; /* Vertical alignment for the mobile */
+}
+a:nth-of-type(3){
+  background-position: calc(100% - 29px) calc(100% - 28px);
 }
 @media (prefers-color-scheme: dark) {
   html {

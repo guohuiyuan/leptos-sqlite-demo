@@ -71,6 +71,7 @@ ssr = [
   "dep:serde_json",
 ]
 
+
 [package.metadata.leptos]
 # Path, relative to root, to generat rust code to
 gen_file = "src/server/generated.rs"
